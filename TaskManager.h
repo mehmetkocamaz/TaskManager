@@ -20,6 +20,7 @@ class TaskManager {
 public:
 
 	void Execute(TaskManager& tasky) {
+		FileInit();
 		FillTheVector();
 		Instructions();
 		int choice = 0;
@@ -76,6 +77,20 @@ public:
 				break;
 			}
 			SetConsoleTextColor(WHITE);
+		}
+		int wait = 0;
+		cin >> wait;
+	}
+
+	void FileInit() {
+		ofstream outputFile("Tasky.txt", ios::app);
+		if (outputFile.is_open())
+		{
+			outputFile.close();
+		}
+		else
+		{
+			cout << "Unable to open file." << endl;
 		}
 	}
 
