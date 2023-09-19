@@ -53,8 +53,16 @@ public:
 				SetConsoleTextColor(RED);
 				cout << "Enter the task number to mark as completed: ";
 				//getline(cin, taskIndex);
-				cin >> taskIndex;
-				tasky.MarkCompleted(taskIndex - 1); // TRY - CATCH KULLANMAN GEREKLÝ (VECTOR BOUNDARY) 
+				if (cin >> taskIndex)
+				{
+					tasky.MarkCompleted(taskIndex - 1); // TRY - CATCH KULLANMAN GEREKLÝ (VECTOR BOUNDARY) 
+				}
+				else
+				{
+					SetConsoleTextColor(YELLOW);
+					cout << "Invalid Choise! Program will terminate. \n";
+					choice = 5;
+				}
 				break;
 			case 4:
 				SaveTasksFromFile(m_Task[0]);

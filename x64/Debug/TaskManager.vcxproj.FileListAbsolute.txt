@@ -1,1 +1,2 @@
 C:\Users\kocam\OneDrive\Masaüstü\Mehmet\Projects\C++\TaskManager\x64\Debug\TaskManager.exe
+C:\Users\kocam\OneDrive\Belgeler\GitHub\TaskManager\x64\Debug\TaskManager.exe
